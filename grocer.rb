@@ -80,8 +80,8 @@ if cart[index][:clearance] == true
   cart[index][:price] = (cart[index][:price] - (cart[index][:price] * 0.2))
 end
   index += 1 
-
 end
+cart
 end
 
 def checkout(cart, coupons)
