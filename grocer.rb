@@ -44,8 +44,16 @@ end
 
 
 def apply_coupons(cart, coupons)
-  #cart = array collection of item hashes 
-  #coupons = 
+  counter = 0 
+  while counter < coupons.length do 
+    cart_item = find_item_by_name_in_collection(coupons[counter][:item], cart) 
+    couponed_item_name = "#{coupons[counter][:item]} W/COUPON"
+    cart_item_with_coupon = find_item_by_name_in_collection(couponed_item_name, cart)
+    if cart_item && cart_item[:count] >= coupons[counter][:num] 
+      
+    end 
+    counter += 1 
+  end
 end
 
 def apply_clearance(cart)
